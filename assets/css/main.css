@@ -2687,11 +2687,32 @@ input, select, textarea {
 			}
 
 
-			.image.fit img {
-				width: 100%;
-				height: 120%; /* This will make the height half of the width, creating a wide rectangle */
-				object-fit: cover;
-			}
+
+
+/* General styling for images */
+.image img {
+    width: 300px; /* Set a fixed width for all images */
+    max-width: 100%; /* Ensure responsiveness */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Prevent cropping */
+    margin: 0 auto; /* Center the image if necessary */
+}
+
+.image.fit img {
+    width: 200%; /* Make the image take up the full width of its container */
+    height: 300px; /* Set a fixed height to ensure consistency */
+    object-fit: cover; /* Maintain the aspect ratio while cropping to fill the container */
+}
+
+/* Mobile-specific styling for images */
+@media screen and (max-width: 480px) {
+    .image img {
+        width: 100%; /* Make the image take the full width of its container on smaller screens */
+        max-width: 100%; /* Ensure it doesn't exceed the container's width */
+    }
+}
+
+
 
 		@media screen and (max-width: 736px) {
 
