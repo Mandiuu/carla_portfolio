@@ -72,6 +72,13 @@ input, select, textarea {
 	appearance: none;
 }
 
+.full-width model-viewer {
+    max-width: 600px; /* Adjust as needed */
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
 /* Basic */
 
 	@-ms-viewport {
@@ -2668,9 +2675,7 @@ input, select, textarea {
 				margin-top: 0;
 			}
 
-			.image.fit img {
-				width: 100%;
-			}
+		
 
 		.image.main {
 			display: block;
@@ -2696,20 +2701,25 @@ input, select, textarea {
     height: auto; /* Maintain aspect ratio */
     object-fit: contain; /* Prevent cropping */
     margin: 0 auto; /* Center the image if necessary */
+    margin-top: -20px; /* Move the image closer to the title */
 }
 
+/* Full-width image styling */
 .image.fit img {
-    width: 200%; /* Make the image take up the full width of its container */
-    height: 300px; /* Set a fixed height to ensure consistency */
-    object-fit: cover; /* Maintain the aspect ratio while cropping to fill the container */
+    width: 100%; /* Ensure image fits the container width */
+    height: 300px; /* Set a fixed height */
+    object-fit: cover; /* Maintain aspect ratio with cropping */
+    margin-top: -20px; /* Bring the image closer to the title */
 }
 
 /* Mobile-specific styling for images */
 @media screen and (max-width: 480px) {
     .image img {
-        width: 100%; /* Make the image take the full width of its container on smaller screens */
-        max-width: 100%; /* Ensure it doesn't exceed the container's width */
+        width: 100%; /* Full width on mobile */
+        max-width: 100%;
+        margin-top: -10px; /* Slightly closer to title on mobile */
     }
+
 }
 
 
@@ -3301,7 +3311,7 @@ input, select, textarea {
 		left: 0;
 		width: 100vw;
 		height: 100vh;
-		background-color: #212931;
+		background-color: #ffffff;
 		background-image: 
 			linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), /* Dark overlay */
 			url("../../images/overlay.png"), 
@@ -3318,6 +3328,12 @@ input, select, textarea {
 				position: fixed;
 				width: 100vw;
 				height: 100vh;
+			}
+
+			@media screen and (max-width: 480px) {
+				#wrapper > .bg {
+					background-attachment: scroll;
+				}
 			}
 
 		#wrapper.fade-in:before {
@@ -3956,129 +3972,141 @@ input, select, textarea {
 
 			}
 
-		#main > .posts {
-			display: -moz-flex;
-			display: -webkit-flex;
-			display: -ms-flex;
-			display: flex;
-			-moz-flex-wrap: wrap;
-			-webkit-flex-wrap: wrap;
-			-ms-flex-wrap: wrap;
-			flex-wrap: wrap;
-			-moz-align-items: -moz-stretch;
-			-webkit-align-items: -webkit-stretch;
-			-ms-align-items: -ms-stretch;
-			align-items: stretch;
-			text-align: center;
-			width: 100%;
-			padding: 0;
-		}
+	/* Main posts container */
+#main > .posts {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+}
 
-			#main > .posts > * {
-				-moz-flex-shrink: 1;
-				-webkit-flex-shrink: 1;
-				-ms-flex-shrink: 1;
-				flex-shrink: 1;
-				-moz-flex-grow: 0;
-				-webkit-flex-grow: 0;
-				-ms-flex-grow: 0;
-				flex-grow: 0;
-			}
+#main > .posts > * {
+    width: 50%;
+    padding: 2rem; /* Adjust padding as needed */
+    box-sizing: border-box;
+}
 
-			#main > .posts > * {
-				width: 50%;
-			}
+/* Article styling for each post */
+#main > .posts > article {
+    border-color: #eeeeee;
+    border-left-width: 2px;
+    border-top-width: 2px;
+    border-style: solid;
+    text-align: center;
+}
 
-			#main > .posts > * {
-				padding: 4rem;
-				width: 50%;
-			}
+#main > .posts > article:nth-child(2n - 1) {
+    border-left-width: 0;
+}
 
-			#main > .posts > article {
-				border-color: #eeeeee;
-				border-left-width: 2px;
-				border-style: solid;
-				border-top-width: 2px;
-				text-align: center;
-			}
+#main > .posts > article:nth-child(-n + 2) {
+    border-top-width: 0;
+}
 
-				#main > .posts > article > :last-child {
-					margin-bottom: 0;
-				}
+/* Styling individual posts */
+.posts article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-sizing: border-box;
+	line-height: 2.3em;
+}
 
-				#main > .posts > article:nth-child(2n - 1) {
-					border-left-width: 0;
-				}
+/* Title styling */
+.posts article header h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    height: 4em; /* Fixed height for titles */
+    line-height: 1.2em;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
 
-				#main > .posts > article:nth-child(-n + 2) {
-					border-top-width: 0;
-				}
+/* Image styling */
+.posts article .image.fit {
+    height: 250px; /* Fixed height for images */
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
 
-			@media screen and (max-width: 980px) {
+/* Text styling */
+.posts article p {
+    font-size: 0.9em;
+    text-align: justify;
+    height: 10em; /* Fixed height for text */
+    line-height: 2.0em;
+    overflow: hidden;
+    margin-bottom: 20px;
+	margin-top: 20px;
+}
 
-				#main > .posts > * {
-					width: 50%;
-				}
+/* Button styling */
+.posts article .actions.special {
+    margin-top: auto; /* Pushes button to the bottom */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
-				#main > .posts > * {
-					padding: 2.5rem;
-					width: 50%;
-				}
+.posts article .button {
+    padding: 1px 20px;
+    font-size: 0.9em;
+}
 
-			}
+/* Desktop styling */
+.data-journalism-title {
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    margin-top: 60px; /* Adjust margin-top for spacing */
+    margin-bottom: 50px;
+    position: relative;
+    top: -20px; /* Move title higher by 20px */
+}
 
-			@media screen and (max-width: 736px) {
-
-				#main > .posts > * {
-					width: 100%;
-				}
-
-				#main > .posts > * {
-					padding: 2rem;
-					width: 100%;
-				}
-
-				#main > .posts > article:nth-child(2n - 1) {
-					border-left-width: 2px;
-				}
-
-				#main > .posts > article:nth-child(-n + 2) {
-					border-top-width: 2px;
-				}
-
-				#main > .posts > article:nth-child(n) {
-					border-left-width: 0;
-				}
-
-				#main > .posts > article:nth-child(-n + 1) {
-					border-top-width: 0;
-				}
-
-				#main > .posts > article .image {
-					max-width: 25rem;
-					margin-left: auto;
-					margin-right: auto;
-				}
-
-			}
+/* Mobile adjustments */
+@media screen and (max-width: 480px) {
+    .data-journalism-title {
+        font-size: 1.8em;
+        margin-top: 40px; /* Adjust margin for spacing */
+        margin-bottom: 30px;
+        padding: 0 10px;
+        line-height: 1.2;
+        position: relative;
+        top: -10px; /* Move title higher by 10px on mobile */
+    }
+}
 
 
 
-		@media screen and (max-width: 736px) {
+	/* Media Queries */
+@media screen and (max-width: 980px) {
+    #main > .posts > * {
+        width: 50%;
+        padding: 2.5rem;
+    }
+}
 
-			#main > * {
-				padding: 2rem 2rem 0.1rem 2rem ;
-			}
-
-		}
-
-		@media screen and (max-width: 480px) {
-
-			#main {
-				width: 100%;
-			}
-
-		}
+@media screen and (max-width: 736px) {
+    #main > .posts > * {
+        width: 100%;
+        padding: 2rem;
+    }
+    #main > .posts > article:nth-child(2n - 1),
+    #main > .posts > article:nth-child(-n + 2) {
+        border-left-width: 0;
+        border-top-width: 0;
+    }
+}
 
 /* Footer */
 #footer {

@@ -4,29 +4,39 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+HTML <!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
 	<head>
-	 	<title>Carla's Portfolio</title>
+		<title>Carla's Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Carla Mandiola's portfolio showcasing data journalism, 3D modeling, and storytelling through interactive visuals.">
+	
+		<!-- Main Stylesheets -->
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<noscript>
+			<link rel="stylesheet" href="assets/css/noscript.css" />
+		</noscript>
+		
+		<!-- Font and Additional Stylesheets -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/model-styles.css">
-
-<link href="basic-styles.css" rel="stylesheet">
-<link href="model-styles.css" rel="stylesheet">
-<link href="scrolly-styles.css" rel="stylesheet">
-<script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollama/3.2.0/scrollama.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.3.0/d3.min.js"></script>
-<script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
-
-
-
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="assets/css/model-styles.css">
+		<link rel="stylesheet" href="assets/css/scrolly-styles.css">
+	
+		<!-- Scripts -->
+		<script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollama/3.2.0/scrollama.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.3.0/d3.min.js"></script>
+		<script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
 	</head>
+	
 	<body class="is-preload">
 
 		<!-- Wrapper -->
@@ -92,7 +102,6 @@
 							ar-modes="webxr scene-viewer quick-look" 
 							camera-controls 
 							tone-mapping="neutral" 
-							poster="data/poster.webp" 
 							shadow-intensity="1" 
 							min-camera-orbit="auto auto 0.3072m" 
 							min-field-of-view="30deg"
@@ -104,13 +113,11 @@
 								<div class="progress-bar hide" slot="progress-bar">
 									<div class="update-bar"></div>
 								</div>
-								<button slot="ar-button" id="ar-button">
-									View in your space
-								</button>
+								
 								<div id="ar-prompt">
 									<img src="https://modelviewer.dev/shared-assets/icons/hand.png">
 								</div>
-							</model-viewer>
+					
 							
 						
 							<div class="progress-bar hide" slot="progress-bar">
@@ -126,7 +133,7 @@
 							
 								<!-- 3d model stuffgoes before here -->
 							
-								<h2 style="text-align: center; font-size: 3em; font-weight: bold; margin-top: 100px; margin-bottom: 50px;">DATA + JOURNALISM</h2>
+								<h2 class="data-journalism-title">DATA + JOURNALISM</h2>
 								
 
 					<!-- Posts -->
@@ -134,25 +141,24 @@
 						<section class="posts">
 							<article>
 								<header>
-									<h2><a href="https://mandiuu.github.io/summons-map/">Yelling, Cursing, Drinking: Police Crack Down
+									<h2><a href="https://mandiuu.github.io/summons-map/">Yelling, Cursing, Drinking: <br />Police Crack Down
 										<br /></a></h2>
 								</header>
 								<a href="https://mandiuu.github.io/summons-map/" class="image fit"><img src="images/summ.png" alt="" /></a>
 								<p>Interactive map and analysis of 10 years of NYPD crime data that reveals a significant disparity in the distribution of quality of life summonses.
 									 While some areas have seen a tenfold or more increase, others have seen minimal changes.
-									  The areas with the most substantial increases are concentrated in tourist zones in Manhattan and affluent 
-									  neighborhoods in central Brooklyn and Queens. </p>
+									 </p>
 								<ul class="actions special">
 									<li><a href="https://mandiuu.github.io/summons-map/" class="button">Full Story</a></li>
 								</ul>
 							</article>
 							<article>
 								<header>
-									<h2><a href="https://mandiuu.github.io/subway-surfing/">Why are people still on top of the subway?<br />
+									<h2><a href="https://mandiuu.github.io/subway-surfing/">Why are people still on top of the subway?
 									</a></h2>
 								</header>
 								<a href="https://mandiuu.github.io/subway-surfing/" class="image fit"><img src="images/subwaysurfing.png" alt="" /></a>
-								<p>The latest data shows that Line 7 became the most popular for subway surfing in NYC, and the numbers rose in spring. Why is this sill happening?
+								<p>
 									With the use of FOIA I got acces to the subway surfing incidents, 
 									fatalities, and safety measures taken by the authorities over the past decade.
 								</p>
@@ -162,7 +168,7 @@
 							</article>
 							<article>
 								<header>
-									<h2><a href="https://mandiuu.github.io/toystory/">What's better than toys? 3D models of toys<br />
+									<h2><a href="https://mandiuu.github.io/toystory/">What's better than toys? <br /> 3D models of toys
 									</a></h2>
 								</header>
 								<a href="https://mandiuu.github.io/toystory/" class="image fit"><img src="images/toystory.png" alt="" /></a>
@@ -175,14 +181,12 @@
 							</article>
 							<article> 
 								<header>
-									<h2><a href="https://mandiuu.github.io/happiness/">What makes us happy<br /></a></h2>
+									<h2><a href="https://mandiuu.github.io/happiness/">What makes us happy: <br /> mapping the happines index</a></h2>
 								</header>
 								<a href="https://mandiuu.github.io/happiness/" class="image fit">
 									<img src="images/happy2.png" alt="Happy" />
 								</a>
-								<p>If someone asks you today if you are happy, your answer may be different tomorrow. Happiness changes as events occur, but in 2012, three economists, John Helliwell, Richard Layard, and Jeffrey Sachs, believed they could measure it.
-
-									They created the World Happiness Report, which measures six different topics that explain happiness around the world.</p>
+								<p>If someone asks you today if you are happy, your answer may be different tomorrow. I visualized maps showing what happiness looks like in the world.</p>
 								<ul class="actions special">
 									<li><a href="https://mandiuu.github.io/happiness/" class="button">Full Story</a></li>
 								</ul>
@@ -193,18 +197,21 @@
 										bikes in NYC</a></h2>
 								</header>
 								<a href="https://mandiuu.github.io/Citi_Bike/" class="image fit"><img src="images/bike.png" alt="" /></a>
-								<p>Finding a Citi Bike in New York City is not always easy. Is common to see stations with no bikes or no docks available. The only borough with stations in its total area is Manhattan, and Staten Island is not included in the system. And of course, that means that there are limits of where you are going to go in the city.</p>
+								<p>Finding a Citi Bike in New York City is not always easy. 
+									 The only borough with stations in its total area is Manhattan, and Staten Island is not included in the system. 
+									 And of course, that means that there are limits of where you are going to go in the city.</p>
 								<ul class="actions special">
 									<li><a href="https://mandiuu.github.io/Citi_Bike/" class="button">Full Story</a></li>
 								</ul>
 							</article>
 							<article>
 								<header>
-									<h2><a href="https://mandiuu.github.io/Taylor-Biden/">Swifties support is bigger than you thought:<br />
-										the Biden case</a></h2>
+									<h2><a href="https://mandiuu.github.io/Taylor-Biden/">Swifties support is bigger than you thought
+										</a></h2>
 								</header>
 								<a href="https://mandiuu.github.io/Taylor-Biden/" class="image fit"><img src="images/taylor.png" alt="" /></a>
-								<p>What happens when the biggest pop star supports a candidate? People give money.</p>
+								<p>What happens when the biggest pop star supports a candidate? People give money. "Cause darling, I'm a nightmare dressed like a daydream."
+								</p>
 								<ul class="actions special">
 									<li><a href="https://mandiuu.github.io/Taylor-Biden/" class="button">Full Story</a></li>
 								</ul>
