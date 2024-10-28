@@ -73,12 +73,12 @@ input, select, textarea {
 }
 
 .full-width model-viewer {
-    max-width: 600px; /* Adjust as needed */
+    max-width: 600px;
     width: 100%;
-    height: auto;
+    height: 50vh; /* Sets a height limit relative to viewport */
+    max-height: 400px;
     margin: 0 auto;
 }
-
 /* Basic */
 
 	@-ms-viewport {
