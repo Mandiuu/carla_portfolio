@@ -2712,18 +2712,6 @@ input, select, textarea {
     margin-top: -20px; /* Bring the image closer to the title */
 }
 
-/* Mobile-specific styling for images */
-@media screen and (max-width: 480px) {
-    .image img {
-        width: 100%; /* Full width on mobile */
-        max-width: 100%;
-        margin-top: -10px; /* Slightly closer to title on mobile */
-    }
-
-}
-
-
-
 		@media screen and (max-width: 736px) {
 
 			.image.fit {
@@ -4151,24 +4139,6 @@ input, select, textarea {
     gap: 1rem;
 }
 
-/* Responsive design for smaller screens */
-@media screen and (max-width: 736px) {
-    #footer {
-        padding: 1.5rem 1rem;
-    }
-    
-    #footer .contact {
-        text-align: center;
-    }
-
-    #footer h3 {
-        font-size: 1rem;
-    }
-
-    #footer p {
-        font-size: 0.8rem;
-    }
-}
 
 
 	#copyright {
@@ -4477,3 +4447,6 @@ input, select, textarea {
 		}
 
 	}
+
+
+	

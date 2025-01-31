@@ -1,0 +1,45 @@
+@media screen and (max-width: 768px) {
+    /* Add all mobile-specific styles here */
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .header.with-image-bg {
+        font-size: 14px;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .header p {
+        font-size: 14px;
+    }
+
+    .menu {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    .menu-toggle {
+        width: 30px;
+        height: 30px;
+    }
+
+    .section {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+}
